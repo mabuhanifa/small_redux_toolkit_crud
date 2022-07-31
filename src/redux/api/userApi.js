@@ -7,11 +7,11 @@ export const usersApi = createApi({
   endpoints: (builder) => ({
     users: builder.query({
       query: (url) => ({
-        url: `/${url}`,
+        url: `${url}`,
         method: "GET",
       }),
     }),
   }),
 });
 
-export const { getUsersQuery } = usersApi;
+export const { useUsersQuery } = usersApi;
