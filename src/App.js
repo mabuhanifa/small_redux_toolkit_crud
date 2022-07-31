@@ -1,4 +1,5 @@
 import { FiEdit, FiEye, FiTrash2 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import "./App.css";
 import { useUsersQuery } from "./redux/api/userApi";
 
@@ -8,7 +9,7 @@ function App() {
   console.log(data);
   return (
     <div className="flex justify-center mt-20">
-      <table class="table-auto min-w-[1200px] border border-gray-100 rounded">
+      <table className="table-auto min-w-[1200px] border border-gray-100 rounded">
         <thead className="bg-indigo-700  text-white">
           <tr>
             <th className="p-5 text-center">Name</th>
@@ -29,17 +30,23 @@ function App() {
               <td className="p-5 text-center">{user.address.city}</td>
               <td className="p-5 text-center ">
                 <div className="flex justify-center text-blue-500 text-xl ">
-                  <FiEye />
+                  <Link to="/">
+                    <FiEye />
+                  </Link>
                 </div>
               </td>
               <td className="p-5 ">
                 <div className="flex justify-center text-green-500 text-xl">
-                  <FiEdit />
+                  <Link to="/">
+                    <FiEdit />
+                  </Link>
                 </div>
               </td>
               <td className="p-5 ">
                 <div className="flex justify-center text-red-500 text-xl">
-                  <FiTrash2 />
+                  <Link to="/">
+                    <FiTrash2 />
+                  </Link>
                 </div>
               </td>
             </tbody>
