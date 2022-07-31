@@ -4,9 +4,8 @@ import { useUsersQuery } from "../redux/api/userApi";
 import Spinner from "./spinner/Spinner";
 
 const Users = () => {
-  const query = `/users`;
-  const { data, isLoading } = useUsersQuery(query);
-  console.log(data);
+  const url = `/users`;
+  const { data, isLoading } = useUsersQuery(url);
   return (
     <>
       {isLoading && <Spinner />}
