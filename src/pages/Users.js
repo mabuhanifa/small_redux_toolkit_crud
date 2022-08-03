@@ -7,7 +7,7 @@ const Users = () => {
   const url = `/users`;
   const { data, isLoading } = useUsersQuery(url);
   return (
-    <div className="min-h-screen min-w-screen bg-[#111617] flex justify-center items-center text-gray-200">
+    <div className="min-h-screen min-w-screen bg-[#0b1616] flex justify-center items-center text-gray-200">
       {isLoading && <Spinner />}
       <div>
         <table className="table-auto">
